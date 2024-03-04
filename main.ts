@@ -12,8 +12,8 @@ function Farbe_gruen_einstellen2 () {
     gruen = Farbwert
 }
 basic.forever(function () {
-    Farbwert = Math.map(pins.analogReadPin(AnalogPin.P0), 0, 1023, 0, 255)
-    if (pins.digitalReadPin(DigitalPin.P1) == 1) {
+    Farbwert = Math.map(pins.analogReadPin(AnalogPin.P1), 0, 1023, 0, 255)
+    if (pins.digitalReadPin(DigitalPin.P0) == 1) {
         Farbe_rot_einstellen()
         basic.showNumber(Math.round(rot))
     } else if (pins.digitalReadPin(DigitalPin.P2) == 1) {
